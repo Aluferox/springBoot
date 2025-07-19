@@ -82,5 +82,11 @@ public class TarefasController {
     public List<Tarefa> getTarefaOdenadaByNaoCompleta() {
         return tarefaService.tarefaNaoCompletaOrdenadaPorData();
     }
+
+    @GetMapping("/completa")
+    public ResponseEntity<List<Tarefa>> getTareasConcluidas(@RequestParam(name = "completa") boolean completa){
+        List<Tarefa> tarefas = tarefaService.getAllTarefasCompletas(completa);
+        return ResponseEntity.ok(tarefas);
+    }
 }
 

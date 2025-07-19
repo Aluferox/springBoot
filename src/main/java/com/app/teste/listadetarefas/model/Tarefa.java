@@ -21,10 +21,10 @@ public class Tarefa {
     private String tarefa;
     private String descricao;
     private Boolean completa;
+    private LocalDate data;
 
     @Enumerated(EnumType.STRING)
     private Priority prioridade;
-    private LocalDate data;
     private String categoria;
 
 }

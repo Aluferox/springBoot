@@ -73,6 +73,9 @@ public class TarefaService {
     public List<Tarefa> tarefaNaoCompletaOrdenadaPorData() {
        return tarefaRepository.findByCompletaFalseOrderByDataAscPrioridadeDesc();
     }
+    public List<Tarefa> getAllTarefasCompletas(boolean completa) {
+        return tarefaRepository.findBycompleta(completa);
+    }
 
 
 }

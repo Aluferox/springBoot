@@ -32,7 +32,7 @@ public interface TarefaRepository extends JpaRepository<Tarefa, Long> {
 
     // você também pode definir métodos personalizados aqui que o spring data JPA
     // implementará automaticamente com base no nome do método(Query Methods)
-    boolean findBycompleta(boolean completa);
+    List<Tarefa> findBycompleta(boolean completa);
     List<Tarefa> findByCategoria(String categoria);
     List<Tarefa> findAllByOrderByPrioridadeAsc();
     List<Tarefa> findAllByOrderByCategoriaDesc();
